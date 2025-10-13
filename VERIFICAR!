@@ -1,0 +1,20 @@
+<meta name="description" content="Descrição do conteúdo do site">
+usado para fornecer uma breve descrição do conteúdo do site que pode ser usado pelos mecanismos de pesquisa.
+
+<meta name="keywords" content="palavras-chave separadas por vírgula"> 
+usado para fornecer palavras-chave relevantes para o conteúdo do site que podem ser usadas pelos mecanismos de pesquisa.
+
+<meta name="author" content="Nome do autor">
+usado para especificar o nome do autor do site.
+
+<meta name="robots" content="noindex, nofollow">
+usado para instruir os mecanismos de pesquisa a não indexar ou seguir as páginas do site.
+
+<meta property="og:title" content="Título compartilhado nas redes sociais">
+usado para fornecer um título personalizado para ser usado quando o conteúdo do site é compartilhado em redes sociais.
+
+<meta property="og:description" content="Descrição compartilhada nas redes sociais">
+usado para fornecer uma descrição personalizada para ser usada quando o conteúdo do site é compartilhado em redes sociais.
+
+<meta property="og:image" content="URL da imagem compartilhada nas redes sociais">
+usado para fornecer uma imagem personalizada para ser usada quando o conteúdo do site é compartilhado em redes sociais.
