@@ -8,7 +8,7 @@ from apps.base.views import base_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('base/', base_view, name='base'),
-    path('contas/', include('contas.urls')),
+    path('contas/', include('apps.contas.urls')),
     
     path('', include('pages.urls')),
 ]

@@ -1,20 +1,21 @@
-from email.headerregistry import Group
+from django.contrib.auth.models import Group
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from apps.contas.models import MyUser
-from apps.contas.permissions import grupo_colaborador_required
-from contas.forms import UserChangeForm
+from contas.models import MyUser
+from contas.permissions import grupo_colaborador_required
 
-from apps.contas.forms import CustomUserCreationForm
+from apps.contas.forms import UserChangeForm, CustomUserCreationForm
+
+group, created = Group.objects.get_or_create(name='Usuário')
 
 # Rota de Login
 def login_view(request):
     if request.method == 'POST': # metodo POST
         email = request.POST.get('email') # Valor do campo email
         password = request.POST.get('password') # Valor do campo password 
-        user = authenticate(request, email=email, password=password) # Retorna a autenticação
+        user = authenticate(request, username=email, password=password) # Retorna a autenticação
         if user is not None: # se user não for none ou underfine 
             login(request, user) # faz login no sistema
             return redirect('home') # Volta para rota home 
