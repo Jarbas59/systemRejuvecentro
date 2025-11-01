@@ -1,106 +1,162 @@
-{% if bloco.bloco.nome == 'SLIDE' %}
-<section>
-    <div id="carouselExampleIndicators" class="carousel carousel-dark slide mb-6" data-aos="fade-up" data-bs-ride="carousel" data-bs-theme="light">
-        <div class="carousel-indicators">
-            {% for slide in bloco.conteudo.all %} 
-            {% if forloop.first %}
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{forloop.counter0}}" 
-										class="active" aria-current="true" aria-label="Slide {{forloop.counter0}}"></button> 
-             {% else %}
-                <button type="button" data-bs-target="#carouselExampleIndicators" 
-										data-bs-slide-to="{{forloop.counter0}}" aria-label="Slide {{forloop.counter0}}"></button>
-            {% endif %}  
-            {% endfor %}  
-        </div>
-        <div class="carousel-inner">
-            {% for slide in bloco.conteudo.all %} 
-            {% if forloop.first %}
-            <div class="carousel-item active">
-            {% else %}
-            <div class="carousel-item">
-            {% endif %} 
-                <img src="{{slide.imagem.url}}" class="object-fit-cover d-block w-100" style="min-height: 700px; max-height: 1000px" alt="Imagem de Slide">
-                <div class="carousel-caption d-flex flex-column justify-content-center pb-3 pb-md-5 h-100">
-                    <div class="row align-items-center text-start me-4">
-                        <div class="col-md-8 pt-5">
-                            <span class="text-white fw-normal fs-5">{{slide.titulo_1}}</span>
-                            <h1 class="mb-4 text-white fw-bold fs-1">{{slide.titulo_2}}</h1>
-                            <p class="mb-3 text-white fw-light">{{slide.descricao_1}}</p>
-                            <p class="text-white mb-2 fw-light">{{slide.descricao_2}}</p> 
-                            <p>
-                                {% if slide.titulo_botao_1 %}
-                                <a href="{% url ''|add:slide.rota_botao_1|add:'' %}" class="btn btn-warning py-3 px-4">{{slide.titulo_botao_1}}</a> 
-                                {% endif %}   
-                                {% if slide.titulo_botao_2 %}
-                                <a href="{% url ''|add:slide.rota_botao_2|add:'' %}" class="btn btn-warning py-3 px-4">{{slide.titulo_botao_2}}</a>
-                                {% endif %}  
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            {% endfor %}
-        </div>
-    </div>
+{% load static %}
+<section class="menu-categorias">
+  <!-- Linha 1 -->
+  <div class="categoria pequena">
+    <a href="#">
+      <img src="{% static 'images/fundomnilife.jpg' %}" alt="Omnilife">
+      <span>OMNILIFE</span>
+    </a>
+  </div>
+
+  <div class="categoria grande">
+    <a href="#">
+      <img src="{% static 'images/fundoeletrofitness.jpg' %}" alt="EletroFitness">
+      <span>ELETROFITNESS</span>
+    </a>
+  </div>
+
+  <!-- Linha 2 -->
+  <div class="categoria media">
+    <a href="#">
+      <img src="{% static 'images/fundomelasma.jpg' %}" alt="Melasma">
+      <span>MELASMA</span>
+    </a>
+  </div>
+
+  <div class="categoria media">
+    <a href="#">
+      <img src="{% static 'images/fundojaleco.jpg' %}" alt="Jalecos">
+      <span>JALECOS</span>
+    </a>
+  </div>
+
+  <div class="categoria media">
+    <a href="#">
+      <img src="{% static 'images/fundoprocedimentos.jpg' %}" alt="Procedimentos">
+      <span>PROCEDIMENTOS</span>
+    </a>
+  </div>
 </section>
-{% endif %}
 
 <style>
-@media (max-width: 768px){
-    .carousel-item{
-        height: 1000px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .menu-categorias {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 45vh 45vh;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .categoria {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .categoria a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .categoria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.15);
+    transition: transform 0.4s ease, filter 0.3s ease;
+  }
+
+  .categoria span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.93);
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 1px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .categoria:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.5);
+  }
+
+  /* ===== Layout Desktop ===== */
+  .pequena {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+
+  .grande {
+    grid-column: span 4;
+    grid-row: 1;
+  }
+
+  .media {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+
+  /* ===== Responsivo Tablet ===== */
+  @media (max-width: 1024px) {
+    .menu-categorias {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 40vh;
     }
 
-    .carousel-item img{
-        height: 1000px;
+    .pequena,
+    .grande,
+    .media {
+      grid-column: span 1;
+      grid-row: auto;
+    }
+  }
+
+  /* ===== Responsivo Celular ===== */
+  @media (max-width: 768px) {
+    .menu-categorias {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 45vh;
     }
 
-    .carousel-caption h1 {
-        font-size: 1.2rem;
-        line-height: 1.2;
+    .categoria span {
+      font-size: 0.9rem;
+      padding: 8px 16px;
     }
-    
-    .carousel-caption span {
-        font-size: 0.9rem;
-    }
-    
-    .carousel-caption p {
-        font-size: 0.85rem;
-    }
-}
+  }
 
-@media (min-width: 768px) and (max-width: 1199px) {
-    .carousel-item{
-        height: 900px;
+  @media (max-width: 480px) {
+    .menu-categorias {
+      grid-auto-rows: 40vh;
     }
 
-    .carousel-item img{
-        height: 900px;
+    .categoria span {
+      font-size: 0.85rem;
+      padding: 6px 14px;
     }
-
-    .carousel-caption h1 {
-        font-size: 1.4rem;
-        line-height: 1.3;
-    }
-
-    .carousel-caption span {
-        font-size: 1rem;
-    }
-
-    .carousel-caption p {
-        font-size: 0.9rem;
-    }
-
-    .bloco {
-        padding-left: 250px;
-    }
-    
-    .sidebar {
-        width: 100%;
-    }
-    
-    footer {
-        display: none;
-    }
-}
+  }
 </style>
