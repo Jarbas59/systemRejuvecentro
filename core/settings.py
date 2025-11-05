@@ -240,7 +240,7 @@ MESSAGE_TAGS = {
 
 #Configurações de TimeOut:
 
-SESSION_EXPIRE_SECONDS = 1800
+SESSION_EXPIRE_SECONDS = 43200
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_TIMEOUT_REDIRECT = 'https://rejuvecentro.com.br/contas/timeout/'
 
