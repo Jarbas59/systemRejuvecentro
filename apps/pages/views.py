@@ -15,3 +15,18 @@ def paginas_view(request):
         }
     context = {'blocos': pagina[str(url_name)]}
     return render(request, 'index.html', context)
+
+def omnilife_view(request):
+    return render(request, 'components/pagesdirecionamento/page1_omnilife.html')
+
+def eletrofitness_view(request):
+    return render(request, 'components/pagesdirecionamento/page2_eletrofitness.html')
+
+def procedimentos_view(request):
+    return render(request, 'components/pagesdirecionamento/page3_procedimentos.html')
+
+def jalecos_view(request):
+    return render(request, 'components/pagesdirecionamento/page4_jalecos.html')
+
+def melasma_view(request):
+    return render(request, 'components/pagesdirecionamento/page5_melasma.html')

@@ -2,14 +2,14 @@
 <section class="menu-categorias">
   <!-- Linha 1 -->
   <div class="categoria pequena">
-    <a href="#">
+    <a href="{% url 'omnilife' %}">
       <img src="{% static 'images/fundoOmnilife.jpg' %}" alt="Omnilife">
       <span>OMNILIFE</span>
     </a>
   </div>
 
   <div class="categoria grande">
-    <a href="#">
+    <a href="{% url 'eletrofitness' %}">
       <img src="{% static 'images/fundoEletrofitness.jpg' %}" alt="EletroFitness">
       <span>ELETROFITNESS</span>
     </a>
@@ -17,21 +17,21 @@
 
   <!-- Linha 2 -->
   <div class="categoria media">
-    <a href="#">
+    <a href="{% url 'procedimentos' %}">
       <img src="{% static 'images/fundoProcedimentos.jpg' %}" alt="Procedimentos">
       <span>PROCEDIMENTOS</span>
     </a>
   </div>
 
   <div class="categoria media">
-    <a href="#">
+    <a href="{% url 'jalecos' %}">
       <img src="{% static 'images/fundoJaleco.jpg' %}" alt="Jalecos">
       <span>JALECOS</span>
     </a>
   </div>
 
   <div class="categoria media">
-    <a href="#">
+    <a href="#{% url 'melasma' %}">
       <img src="{% static 'images/fundoMelasma.jpg' %}" alt="Melasma">
       <span>MELASMA</span>
     </a>
@@ -90,8 +90,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.93);
-    color: #000;
+    background-color: rgba(255, 255, 255, 0.808);
+    color: #28282b;
     padding: 15px 30px;
     border-radius: 1px;
     font-size: 1rem;

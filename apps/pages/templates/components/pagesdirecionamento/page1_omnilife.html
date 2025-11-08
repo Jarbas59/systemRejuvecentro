@@ -1,0 +1,346 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="banner-omnilife d-flex align-items-center justify-content-center text-light">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <img src="{% static 'images/logoomnilife.png' %}" alt="Omnilife" class="img-fluid logo-omnilife mb-3">
+    <h1 class="fw-bold">Saúde, Energia e Bem-Estar <br> em Cada Produto</h1>
+    <p class="lead">Conheça a linha Omnilife e transforme sua rotina com mais vitalidade!</p>
+    <a href="#produtos" class="btn btn-light btn-lg mt-3 shadow-sm">Ver Produtos</a>
+  </div>
+</section>
+
+<!-- Objetivos e Sistemas que Atuam -->
+<section class="section-omnilife py-5">
+  <div class="container position-relative">
+    <div class="row align-items-center g-5">
+      
+      <!-- Coluna esquerda -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold text-gradient mb-4">Objetivos dos Produtos Omnilife</h2>
+        <p class=" mb-5">
+          Os produtos Omnilife foram desenvolvidos para nutrir o corpo de forma completa, 
+          fortalecer os sistemas vitais e promover um estilo de vida equilibrado e cheio de energia.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-6">
+            <div class="card objetivo-card border-0 text-center p-4">
+              <i class="bi bi-heart-fill fs-1 text-primary mb-3"></i>
+              <h6 class="fw-semibold mb-1">Fortalecimento e Saúde</h6>
+              <p class="text-muted small mb-0">Fortalecer o organismo e promover a recuperação da saúde.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card objetivo-card border-0 text-center p-4">
+              <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>
+              <h6 class="fw-semibold mb-1">Mais Resistência e Longevidade</h6>
+              <p class="text-muted small mb-0">Aumentar a resistência e promover longevidade.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card objetivo-card border-0 text-center p-4">
+              <i class="bi bi-lightning-charge-fill fs-1 text-primary mb-3"></i>
+              <h6 class="fw-semibold mb-1">Equilíbrio Corporal</h6>
+              <p class="text-muted small mb-0">Equilibrar os sistemas do corpo.</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card objetivo-card border-0 text-center p-4">
+              <i class="bi bi-mindfulness fs-1 text-primary mb-3"></i>
+              <h6 class="fw-semibold mb-1">Controle de Peso e Medidas</h6>
+              <p class="text-muted small mb-0">Baixar peso e medidas de forma saudável.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna direita -->
+      <div class="col-lg-6 text-center">
+        <div class="sistemas-wrapper p-4 rounded-4 shadow-lg position-relative overflow-hidden">
+          <h3 class="fw-bold text-gradient mb-3">Sistemas em que os Produtos Atuam</h3>
+          <p class=" mb-4">
+            A Omnilife atua em múltiplos sistemas do corpo humano — 
+            cardiovascular, digestivo, nervoso, imunológico e muito mais.
+          </p>
+          <img src="{% static 'images/sistemas-omnilife.png' %}" 
+               alt="Sistemas do corpo humano"
+               class="img-fluid rounded-4 sistema-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Produtos -->
+<section id="produtos" class="produtos-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-gradient-dark">Nossos Produtos</h2>
+      <p class="text-muted">Escolha o produto ideal para você e transforme sua saúde e energia!</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card de Produto -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card produto-card border-0 shadow-sm h-100 d-flex flex-column">
+          <div class="produto-img-wrapper">
+            <img src="{% static 'images/Produto_Omnilife_DOLCEVITA_Ecommerce.png' %}" class="card-img-top" alt="Produto Omnilife">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold">DOLCE VITA</h5>
+              <p class="card-text text-muted small">
+                Bebida com sabor toranja que ajuda a equilibrar o açúcar no sangue, controlar o apetite e melhorar o metabolismo. Rica em fibras e ideal para dietas com baixo teor de açúcar.
+              </p>
+            </div>
+            <div>
+              <div class="preco mb-3">
+                <span class="preco-antigo">R$ 149,90</span>
+                <span class="preco-atual">R$ 129,90</span>
+              </div>
+              <a href="https://wa.me/5541991929668?text=Olá! Tenho interesse no DOLCE VITA Omnilife!" 
+                 class="btn btn-whatsapp w-100" target="_blank">
+                <i class="bi bi-whatsapp"></i> Comprar pelo WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outro Produto -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card produto-card border-0 shadow-sm h-100 d-flex flex-column">
+          <div class="produto-img-wrapper">
+            <img src="{% static 'images/Produto_Omnilife_FiberN_Plus_Ecommerce.png' %}" class="card-img-top" alt="Produto Omnilife">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold">FIBER’N PLUS</h5>
+              <p class="card-text text-muted small">
+                Bebida sabor pêssego com fibras solúveis que auxiliam o bom funcionamento do sistema digestivo e intestinal. Leve, nutritiva e com baixo valor calórico.
+              </p>
+            </div>
+            <div>
+              <div class="preco mb-3">
+                <span class="preco-antigo">R$ 169,90</span>
+                <span class="preco-atual">R$ 149,90</span>
+              </div>
+              <a href="https://wa.me/5541991929668?text=Olá! Tenho interesse no FIBER’N PLUS!" 
+                 class="btn btn-whatsapp w-100" target="_blank">
+                <i class="bi bi-whatsapp"></i> Comprar pelo WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outro Produto -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card produto-card border-0 shadow-sm h-100 d-flex flex-column">
+          <div class="produto-img-wrapper">
+            <img src="{% static 'images/Produto_Omnilife_PMaker_Laranja_Ecommerce.png' %}" class="card-img-top" alt="Produto Omnilife">
+          </div>
+          <div class="card-body text-center d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold">P+MAKER</h5>
+              <p class="card-text text-muted small">
+                Suplemento que auxilia na regeneração de músculos, articulações e tecidos. Melhora a circulação, acelera a recuperação e fortalece o corpo de dentro pra fora.
+              </p>
+            </div>
+            <div>
+              <div class="preco mb-3">
+                <span class="preco-antigo">R$ 119,90</span>
+                <span class="preco-atual">R$ 99,90</span>
+              </div>
+              <a href="https://wa.me/5541991929668?text=Olá! Tenho interesse no P+MAKER!" 
+                 class="btn btn-whatsapp w-100" target="_blank">
+                <i class="bi bi-whatsapp"></i> Comprar pelo WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: url("{% static 'images/bgomni.jpg' %}") center center / cover no-repeat fixed;
+    background-attachment: fixed;
+    background-color: #fff; /* fallback */
+  }
+
+  /* Banner principal */
+  .banner-omnilife {
+    position: relative;
+    top: -120px;
+    width: 100%;
+    height: calc(100vh + 70px);
+    background: url("{% static 'images/backgrounOmniLife.png' %}") center center/cover no-repeat;
+  }
+  .banner-omnilife .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+  }
+  .banner-omnilife .container {
+    z-index: 2;
+  }
+
+  .logo-omnilife {
+    display: none;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background: transparent !important;
+  }
+
+  /* SEÇÃO OBJETIVOS E SISTEMAS */
+  .section-omnilife {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    color: #28282b;
+    top: -120px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #9a72d4ff, #581dafff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Cartões */
+  .objetivo-card {
+    background: rgba(230, 230, 230, 0.9);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+  .objetivo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(108, 45, 199, 0.15);
+  }
+
+  /* Wrapper sistemas */
+  .sistemas-wrapper {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+  }
+  .sistemas-wrapper:hover {
+    transform: scale(1.02);
+  }
+
+  .sistema-img {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s ease;
+  }
+  .sistema-img:hover {
+    transform: scale(1.05);
+  }
+
+  /* --- SEÇÃO DE PRODUTOS --- */
+.produtos-section {
+  width: 100%;
+  background: transparent;
+  color: #28282b;
+}
+
+.text-gradient-dark {
+  background: linear-gradient(90deg, #3c006e, #6c30d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards */
+.produto-card {
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(80, 0, 180, 0.15);
+}
+
+/* Imagem */
+.produto-img-wrapper {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  overflow: hidden;
+}
+.produto-img-wrapper img {
+  max-height: 230px;
+  transition: transform 0.4s ease;
+}
+.produto-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Preços */
+.preco {
+  font-size: 1rem;
+}
+.preco-antigo {
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.preco-atual {
+  color: #3c006e;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  color: #fff;
+  transform: scale(1.03);
+}
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .section-omnilife {
+        text-align: center;
+        background-attachment: scroll;
+    }
+    .sistemas-wrapper {
+        margin-top: 2rem;
+    }
+    .produto-img-wrapper {
+        height: 200px;
+    }
+    .produto-card {
+        margin-bottom: 1rem;
+    }
+  }
+</style>
+{% endblock %}
